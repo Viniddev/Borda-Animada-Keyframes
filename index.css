@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #1C1C1C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    color: blueviolet;
+}
+.conteiner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 550px;
+    border-radius: 15px;
+    background-color:#1C1C1C;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    transition: all .5s;
+    box-shadow: 1px 3px 3px 2px rgba(1, 1, 1, .7);
+    cursor: pointer;
+}
+.conteiner:hover{
+    background-color: #363636;
+}
+.conteiner::before, .conteiner::after{ 
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    background: linear-gradient(to left, #006400,#7CFC00,#FFFF00,#FF0000,#800000,#8B008B,#4B0082, #00008B, #0000CD,#006400);
+    animation: animarborda 10s linear infinite;
+    border-radius: 15px;
+    background-size: 300%;
+    box-shadow: 1px 3px 3px 2px rgba(1, 1, 1, .7);
+}
+@keyframes animarborda{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 300%;
+    }
+}
+.conteiner::after{
+    filter: blur(50px);
+}
